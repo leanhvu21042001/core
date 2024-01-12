@@ -56,6 +56,7 @@ export const vModelText: ModelDirective<
         domValue = domValue.trim()
       }
       if (castToNumber) {
+        vnode.props.type = 'number'
         domValue = looseToNumber(domValue)
       }
       el[assignKey](domValue)
